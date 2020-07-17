@@ -55,6 +55,8 @@ jobs:
       - make_target: make greetings
       # You can get metadata that was set using the command "meta get <key>".
       - get-metadata: meta get example
+      - slackus: meta set notification.slack.second_job.message "foobar"
+      - slackus2: meta set notification.slack.second_job.channels temp_joerg
       # The "run_arbitrary_script" executes a script. This is an alternative to
       # a Makefile target where you want to run a series of commands related to
       # this step
