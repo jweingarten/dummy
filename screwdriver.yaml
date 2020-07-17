@@ -12,14 +12,8 @@ shared:
   image: buildpack-deps
   settings:
     slack:
-        channels:
-            - 'joergchannel'
-        statuses:
-            - SUCCESS
-            - FAILURE
-            - ABORTED
-            - QUEUED
-            - RUNNING
+        channels: [ joergchannel ]
+        statuses: [ FAILURE, SUCCESS, ABORTED, QUEUED, RUNNING ]
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -63,4 +57,3 @@ jobs:
       # a Makefile target where you want to run a series of commands related to
       # this step
       - run_arbitrary_script: ./my_script.sh
-
