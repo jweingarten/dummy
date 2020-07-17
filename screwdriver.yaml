@@ -39,6 +39,7 @@ jobs:
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING
       - slackus: meta set notification.slack.main.channels temp_joerg
+      - slackus2: meta set build.meta.notification.slack.main.channels temp_joerg
       # Metadata is a structured key/value storage of relevant information about a build. 
       # Metadata will be shared with subsequent builds in the same workflow.
       # You can set any key using the command "meta set <key> <value>".
