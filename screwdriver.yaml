@@ -1,5 +1,6 @@
 shared:
-  template: tolar/generic@0.1.114
+  template: tolar/generic@latest
+  image: docker.ouroath.com:4443/tolar/empty
 
 jobs:
   # screwdriver.yaml file will override the implied defaults.
