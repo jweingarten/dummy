@@ -13,7 +13,7 @@ shared:
   settings:
     slack:
         channels: [ joergchannel ]
-        statuses: [ FAILURE, SUCCESS, ABORTED, QUEUED, RUNNING ]
+        #        statuses: [ FAILURE, SUCCESS, ABORTED, QUEUED, RUNNING ]
 
 # Job definition block
 # "main" is a default job that all pipelines have
