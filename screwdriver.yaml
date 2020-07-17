@@ -10,6 +10,16 @@ shared:
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
   image: buildpack-deps
+  settings:
+    slack:
+        channels:
+            - 'joergchannel'
+        statuses:
+            - SUCCESS
+            - FAILURE
+            - ABORTED
+            - QUEUED
+            - RUNNING
 
 # Job definition block
 # "main" is a default job that all pipelines have
