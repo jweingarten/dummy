@@ -13,7 +13,7 @@ shared:
   settings:
     slack:
         channels: [ joergchannel ]
-        #        statuses: [ FAILURE, SUCCESS, ABORTED, QUEUED, RUNNING ]
+        statuses: [ FAILURE, SUCCESS, ABORTED, QUEUED, RUNNING ]
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -38,8 +38,8 @@ jobs:
       # the same job (as shown below).
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING
-      - slackus: meta set notification.slack.main.message "foobar"
-      - slackus2: meta set notification.slack.main.channels temp_joerg
+      # - slackus: meta set notification.slack.main.message "foobar"
+      # - slackus2: meta set notification.slack.main.channels temp_joerg
       # Metadata is a structured key/value storage of relevant information about a build. 
       # Metadata will be shared with subsequent builds in the same workflow.
       # You can set any key using the command "meta set <key> <value>".
@@ -52,8 +52,8 @@ jobs:
       # The "make_target" step calls a Makefile target to perform some set of
       # actions. This is incredibly useful when you need to perform a multi-line
       # command.
-      - slackus: meta set notification.slack.second_job.message "foobar"
-      - slackus2: meta set notification.slack.second_job.channels temp_joerg
+      # - slackus: meta set notification.slack.second_job.message "foobar"
+      # - slackus2: meta set notification.slack.second_job.channels temp_joerg
       - make_target: make greetings
       # You can get metadata that was set using the command "meta get <key>".
       - get-metadata: meta get example
